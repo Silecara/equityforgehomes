@@ -14,10 +14,9 @@ body {
 .logo-header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between; /* logo left, buttons right */
   padding: 20px 40px;
-  background: #fef9f1;
-  gap: 40px;
+  background: #f3eeed;
 }
 
 .logo-header img {
