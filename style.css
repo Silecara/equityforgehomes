@@ -14,19 +14,32 @@
   padding: 0;
 }
 
-/* Header with left-aligned logo */
 .logo-header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 20px 40px;
-  background: #f3eeed; /* soft warm tone */
-  border-bottom: 1px solid #e0ddd9; /* subtle divider */
+  background: #fef9f1;
 }
 
-/* Logo size */
 .logo-header img {
   width: 120px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  color: #0077cc;
 }
 
 /* Body styling */
