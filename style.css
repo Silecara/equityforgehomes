@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: flex-start;
   padding: 20px 40px;
-  background: #fef9f1;
+  background: #f3eeed;
   gap: 40px;
 }
 
@@ -65,7 +65,7 @@ p, ul {
 ul {
   list-style: none;
   padding-left: 0;
-  text-align: right;
+  text-align: center;
 }
 
 ul li {
