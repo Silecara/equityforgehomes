@@ -21,6 +21,8 @@ body {
 
 .logo-header img {
   width: 120px;
+  max-width: 100%;
+  height: auto;
 }
 
 .nav-buttons {
