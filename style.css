@@ -16,7 +16,7 @@
 
 .logo-header {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   padding: 20px 40px;
   background: #fef9f1;
@@ -55,7 +55,7 @@ section {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
-  text-align: center;
+  text-align: right;
 }
 
 /* Headings */
@@ -78,7 +78,7 @@ p, ul {
 ul {
   list-style: none;
   padding-left: 0;
-  text-align: left;
+  text-align: right;
 }
 
 ul li {
