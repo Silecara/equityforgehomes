@@ -4,12 +4,19 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f3eeed;
+  color: #222;
+  line-height: 1.6;
+}
+
 .logo-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 20px 40px;
-  background: #f3eeed;
+  background: #fef9f1;
   gap: 40px;
 }
 
@@ -31,13 +38,6 @@
 
 .nav-buttons a:hover {
   color: #0077cc;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f3eeed;
-  color: #222;
-  line-height: 1.6;
 }
 
 section {
@@ -65,7 +65,7 @@ p, ul {
 ul {
   list-style: none;
   padding-left: 0;
-  text-align: center;
+  text-align: left;
 }
 
 ul li {
