@@ -4,16 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Equity Forge</title>
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body>
+
+  <header>
+    <!-- Hamburger Menu -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<!-- Slide-down Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact Us</a>
+</nav>
+    <div class="logo-header">
+      <img src="images/logo.png" alt="Logo">
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>What We Do</h2>
+    <p>
+      Equity Forge helps homeowners across <strong>Massachusetts</strong> — especially in 
+      <strong>Essex County, Middlesex County, and the greater Boston area</strong> — 
+      sell their properties fast with no repairs, no agent fees, and no stress. Whether 
+      you're facing foreclosure, relocating, or just ready to sell, we make it simple.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Fast Cash Offers</li>
+      <li>No Commissions or Fees</li>
+      <li>Close on Your Timeline</li>
+      <li>Trusted by Local Investors</li>
+      <li>Transparent & Friendly Process</li>
+    </ul>
+  </section>
+
+  <section id="contact">
     <h2>Contact Us</h2>
     <p>Interested in working together? Fill out some info and we’ll be in touch shortly. We can’t wait to hear from you!</p>
 
@@ -31,15 +65,11 @@
   <footer>
     © 2025 Equity Forge. All rights reserved.
   </footer>
-
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.mobile-nav');
-
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
-
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
