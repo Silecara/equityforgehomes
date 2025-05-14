@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Equity Forge</title>
-
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css" />
@@ -12,33 +11,29 @@
 <body>
 
   <header>
-    <!-- Hamburger Menu -->
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<!-- Slide-down Navigation -->
-<nav class="mobile-nav" id="mobileNav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact Us</a>
-</nav>
     <div class="logo-header">
-      <img src="images/logo.png" alt="Logo">
+      <img src="images/logo.png" alt="Equity Forge Logo">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section id="about">
     <h2>What We Do</h2>
     <p>
-      Equity Forge helps homeowners across <strong>Massachusetts</strong> — especially in 
-      <strong>Essex County, Middlesex County, and the greater Boston area</strong> — 
-      sell their properties fast with no repairs, no agent fees, and no stress. Whether 
-      you're facing foreclosure, relocating, or just ready to sell, we make it simple.
+      At <strong>Equity Forge</strong>, we help homeowners across <strong>Massachusetts</strong> — especially in 
+      <strong>Essex County, Middlesex County, and Greater Boston</strong> — sell their homes quickly and stress-free.
+      Whether you're avoiding foreclosure, relocating, or just need fast cash, we’ll make you a fair offer — no agent fees, no repairs, no delays.
     </p>
   </section>
 
   <section id="services">
     <h2>Why Choose Us?</h2>
-    <ul>
+    <ul class="checklist">
       <li>Fast Cash Offers</li>
       <li>No Commissions or Fees</li>
       <li>Close on Your Timeline</li>
@@ -48,28 +43,29 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Interested in working together? Fill out some info and we’ll be in touch shortly. We can’t wait to hear from you!</p>
-
+    <h2>Contact us </h2>
+  <p>Interested in working together? Fill out some info and we’ll be in touch shortly.</p>
     <form action="https://formsubmit.co/contact@equityforgehomes.com" method="POST">
       <div class="form-group">
         <input type="text" name="First Name" placeholder="First Name" required>
         <input type="text" name="Last Name" placeholder="Last Name">
       </div>
       <input type="email" name="Email" placeholder="Email (required)" required>
-      <textarea name="Message" rows="5" placeholder="Message (required)" required></textarea>
-      <button type="submit" class="button">Send</button>
+      <textarea name="Message" rows="5" placeholder="How can we help?" required></textarea>
+      <button type="submit" class="button">Send Message</button>
     </form>
   </section>
 
   <footer>
-    © 2025 Equity Forge. All rights reserved.
+    © 2025 Equity Forge. Built with purpose.
   </footer>
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('mobileNav');
-    nav.classList.toggle('active');
-  }
-</script>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
