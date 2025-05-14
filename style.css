@@ -25,12 +25,13 @@ section {
   text-align: center;
 }
 
-/* Header */
+/* Header Layout */
 .logo-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px;
+  flex-wrap: wrap;
+  padding: 20px 40px;
   background-color: #f3eeed;
   position: relative;
 }
@@ -40,7 +41,19 @@ section {
   height: auto;
 }
 
-/* Hamburger */
+/* Nav */
+.mobile-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Hamburger Icon */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -48,38 +61,45 @@ section {
   z-index: 1001;
 }
 
-/* Nav */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background-color: #fef9f1;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  text-align: right;
-  padding: 20px;
-  z-index: 1000;
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+  .logo-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fef9f1;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
 }
 
-.mobile-nav a {
-  padding: 10px 0;
-  text-decoration: none;
-  color: #222;
-  font-weight: 600;
-}
-
-.mobile-nav.active {
-  display: flex;
-}
-
-/* Checklist */
+/* Checkmark List */
 .checklist {
   list-style: none;
   padding-left: 0;
-  text-align: left;
   max-width: 600px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .checklist li {
@@ -97,6 +117,7 @@ section {
   font-weight: bold;
 }
 
+/* Contact Paragraph Spacing */
 #contact p {
   margin-bottom: 20px;
 }
@@ -145,19 +166,4 @@ footer {
   font-size: 0.9rem;
   background-color: #f3eeed;
   margin-top: 40px;
-}
-
-/* Mobile Styles */
-@media (max-width: 1024px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .logo-header {
-    padding-right: 20px;
-  }
-
-  .mobile-nav {
-    top: 70px;
-  }
 }
