@@ -18,13 +18,13 @@
   <header>
     <div class="logo-header">
       <img src="images/logo.png" alt="Logo">
-      <div class="nav-buttons">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact Us</a>
-        
-      </div>
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     </div>
+    <nav class="mobile-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
   </header>
 
   <section id="about">
@@ -63,6 +63,15 @@
   <footer>
     © 2025 Equity Forge. All rights reserved.
   </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.mobile-nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
