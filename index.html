@@ -7,62 +7,144 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    /* Styles for the SMS Opt-in form */
+    #sms-optin-form {
+      max-width: 400px;
+      margin: 2rem auto 4rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+    }
+    #sms-optin-form h3 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    #sms-optin-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    #sms-optin-form input[type="text"],
+    #sms-optin-form input[type="tel"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    #sms-optin-form input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    #sms-optin-form button {
+      padding: 0.5rem 1rem;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #sms-optin-form button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 <body>
 <header>
-  <div class="logo-header">
-    <img src="images/logo.png" alt="Logo">
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="off-screen-menu">
+   <ul>
+    <li>about</li>
+    <li>services</li>
+    <li>contact us</li>
+   </ul>
   </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  
+  <nav>
+    <div class=".ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 </header>  
-  <section id="about">
-    <h2>What We Do</h2>
-    <p>
-      At <strong>Equity Forge</strong>, we help homeowners across <strong>Massachusetts</strong> — especially in 
-      <strong>Essex County, Middlesex County, and Greater Boston</strong> — sell their homes quickly and stress-free.
-      Whether you're avoiding foreclosure, relocating, or just need fast cash, we’ll make you a fair offer — no agent fees, no repairs, no delays.
-    </p>
-  </section>
 
-  <section id="services">
-    <h2>Why Choose Us?</h2>
-    <ul class="checklist">
-      <li>Fast Cash Offers</li>
-      <li>No Commissions or Fees</li>
-      <li>Close on Your Timeline</li>
-      <li>Trusted by Local Investors</li>
-      <li>Transparent & Friendly Process</li>
-    </ul>
-  </section>
+<section id="about">
+  <h2>What We Do</h2>
+  <p>
+    At <strong>Equity Forge</strong>, we help homeowners across <strong>Massachusetts</strong> — especially in 
+    <strong>Essex County, Middlesex County, and Greater Boston</strong> — sell their homes quickly and stress-free.
+    Whether you're avoiding foreclosure, relocating, or just need fast cash, we’ll make you a fair offer — no agent fees, no repairs, no delays.
+  </p>
+</section>
 
-  <section id="contact">
-    <h2>Contact us </h2>
+<section id="services">
+  <h2>Why Choose Us?</h2>
+  <ul class="checklist">
+    <li>Fast Cash Offers</li>
+    <li>No Commissions or Fees</li>
+    <li>Close on Your Timeline</li>
+    <li>Trusted by Local Investors</li>
+    <li>Transparent & Friendly Process</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact us</h2>
   <p>Interested in working together? Fill out some info and we’ll be in touch shortly.</p>
-    <form action="https://formsubmit.co/contact@equityforgehomes.com" method="POST">
-      <div class="form-group">
-        <input type="text" name="First Name" placeholder="First Name" required>
-        <input type="text" name="Last Name" placeholder="Last Name">
-      </div>
-      <input type="email" name="Email" placeholder="Email (required)" required>
-      <textarea name="Message" rows="5" placeholder="How can we help?" required></textarea>
-      <button type="submit" class="button">Send Message</button>
-    </form>
-  </section>
+ <form action="https://formsubmit.co/contact@equityforgehomes.com" method="POST">
+  <div class="form-group">
+    <input type="text" name="First Name" placeholder="First Name" required>
+    <input type="text" name="Last Name" placeholder="Last Name">
+  </div>
+  <input type="email" name="Email" placeholder="Email (required)" required>
+  <input type="tel" name="Phone Number" placeholder="Phone Number" pattern="^\+?[0-9\s\-]{7,15}$" >
+  <textarea name="Message" rows="5" placeholder="How can we help?" required></textarea>
+  <button type="submit" class="button">Send Message</button>
+</form>
+  <!-- SMS Opt-in Form Start -->
+  <form id="sms-optin-form">
+    <h3>Subscribe for SMS Updates</h3>
 
-  <footer>
-    © 2025 Equity Forge. Built with purpose.
-  </footer>
+    <label for="sms-name">Full Name:</label>
+    <input type="text" id="sms-name" name="sms-name" required placeholder="Your full name" />
 
- <script>
-  function toggleMenu() {
-    const nav = document.getElementById('mobileNav');
-    nav.classList.toggle('active');
-  }
+    <label for="sms-phone">Phone Number:</label>
+    <input type="tel" id="sms-phone" name="sms-phone" required placeholder="+1 555-123-4567" pattern="^\+?[0-9\s\-]{7,15}$" />
+
+    <label>
+      <input type="checkbox" id="sms-consent" required />
+      I agree to receive SMS messages from Equity Forge. Message frequency: approx. 4 per month. Msg & data rates may apply. Reply STOP to opt out.
+    </label>
+
+    <button type="submit" disabled>Subscribe</button>
+  </form>
+  <!-- SMS Opt-in Form End -->
+</section>
+
+<footer>
+  © 2025 Equity Forge. Built with purpose.
+</footer>
+
+<script>
+  const smsForm = document.getElementById('sms-optin-form');
+  const consentCheckbox = document.getElementById('sms-consent');
+  const submitButton = smsForm.querySelector('button');
+
+  consentCheckbox.addEventListener('change', () => {
+    submitButton.disabled = !consentCheckbox.checked;
+  });
+
+  smsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for subscribing to Equity Forge SMS updates!');
+    smsForm.reset();
+    submitButton.disabled = true;
+  });
 </script>
 </body>
 </html>
