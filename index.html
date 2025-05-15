@@ -7,81 +7,7 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Merge and style for contact + SMS opt-in */
-
-    form#contact-form {
-      max-width: 500px;
-      margin: 2rem auto 4rem;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: Arial, sans-serif;
-    }
-
-    form#contact-form h2 {
-      margin-bottom: 1rem;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .form-group {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .form-group input {
-      flex: 1;
-      padding: 0.5rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    form#contact-form input[type="email"],
-    form#contact-form input[type="tel"],
-    form#contact-form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-    }
-
-    form#contact-form label {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    form#contact-form input[type="checkbox"] {
-      margin-right: 0.5rem;
-    }
-
-    form#contact-form button {
-      display: block;
-      width: 100%;
-      padding: 0.75rem;
-      background-color: #0073e6;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    form#contact-form button:hover {
-      background-color: #005bb5;
-    }
-  </style>
-</head>
+</head>  
 <body>
 <header>
   <div class="off-screen-menu">
@@ -131,9 +57,8 @@
     </div>
     <input type="email" name="Email" placeholder="Email (required)" required>
     <input type="tel" name="Phone Number" placeholder="Phone Number" pattern="^\+?[0-9\s\-]{7,15}$" >
-
+    
     <textarea name="Message" rows="5" placeholder="How can we help?" required></textarea>
-
     <label>
       <input type="checkbox" name="SMS Consent" required />
       I agree to receive SMS messages from Equity Forge. Message frequency: approx. 4 per month. Msg & data rates may apply. Reply STOP to opt out.
