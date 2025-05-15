@@ -159,6 +159,60 @@ input, textarea {
   background-color: #444;
 }
 
+/* Adjust form layout */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Group First and Last Name side by side */
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Inputs style */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Make First Name, Last Name, Phone side by side on larger screens */
+.form-group input {
+  flex: 1 1 30%;
+  min-width: 150px;
+}
+
+/* Full width for email and textarea */
+input[type="email"], textarea {
+  width: 100%;
+}
+
+/* Button style (already present but repeated here for completeness) */
+.button {
+  background-color: #222;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
 /* Footer */
 footer {
   text-align: center;
